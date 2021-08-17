@@ -25,14 +25,14 @@
       >
         uncaptured
       </div>
-      <div class="tab5">--</div>
-      <div class="tab6">--</div>
+      <div class="tab5"></div>
+      <div class="tab6"></div>
     </div>
 
     <div class="payment-board-tabs">
       <div class="tab1"><input type="checkbox" checked /></div>
       <div class="tab2">Amount</div>
-      <div class="tab3">--</div>
+      <div class="tab3"></div>
       <div class="tab4">Description</div>
       <div class="tab5">Customer</div>
       <div class="tab6">Date</div>
@@ -127,6 +127,8 @@ export default {
   flex-wrap: nowrap;
   margin-top: 5px;
   border-bottom: 1px solid #e3e8ee;
+        font-size: 14px;
+
   div {
     padding: 15px 5px;
 

@@ -9,7 +9,7 @@
           <input type="search" name="" placeholder="Search..." />
         </div>
         <!-- Three Right Dashboard icons -->
-        <div class="header-tab">
+        <div class="header-tab right-menu">
           <div>
             <a href="#"
               ><img src="@/assets/icons/notifications-1.svg" alt=""
@@ -23,8 +23,7 @@
           </div>
         </div>
       </header>
-             <!-- =========== Dashbaord Header Ends ============= -->
-
+      <!-- =========== Dashbaord Header Ends ============= -->
 
       <!-- =========== Dashbaord Contents Begins ============= -->
 
@@ -47,13 +46,13 @@
           </div>
         </div>
 
-      <!-- =========== Dashbaord Payment Details Components ============= -->
+        <!-- =========== Dashbaord Payment Details Components ============= -->
 
         <div style="padding-bottom: 100px">
           <PaymentBoard />
         </div>
 
-      <!-- =========== Dashbaord Payment Details Footer ============= -->
+        <!-- =========== Dashbaord Payment Details Footer ============= -->
 
         <div class="content-footer">
           <div>16 results</div>
@@ -72,13 +71,16 @@ export default {}
 </script>
 
 <style lang="scss" scoped>
+//  main content styling
 .main {
   padding-right: 14px;
   margin-left: 270px;
   position: relative;
+  //   header syling
   header {
-    position: static;
-    min-width: 100%;
+    position: fixed;
+    right :20px;
+    min-width: 77%;
     border-bottom: 1px solid #e3e8ee;
     z-index: 1;
     display: flex;
@@ -87,7 +89,7 @@ export default {}
     padding: 13px 30px;
     box-sizing: border-box;
     margin-bottom: 30px;
-
+    background: #fff;
     input[type='search'] {
       outline: none;
       border: none;
@@ -95,16 +97,19 @@ export default {}
     }
   }
 
+  // header description styling
   .header-tab {
     display: flex;
     flex-direction: row;
     align-items: center;
     div {
       margin-right: 10px;
+     
     }
   }
+  //   .content-wrapper styling
   .content-wrapper {
-    padding: 0px 30px;
+    padding: 80px 30px 0 30px;
     .content-header {
       display: flex;
       justify-content: space-between;
@@ -186,7 +191,7 @@ export default {}
       color: #3c4257;
     }
     .next {
-      color: #3c4257;
+      color: #000 !important;
     }
   }
   .payment-title {

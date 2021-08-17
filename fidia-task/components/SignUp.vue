@@ -44,18 +44,18 @@
             </div>
 
             <div class="check-input">
-              <input type="checkbox" name="" id="" />
+              <input type="checkbox" checked />
               <span>Stay signed in for a week</span>
             </div>
 
             <div class="form-input" @click="logIn">
-              <div v-if="loader" class="lds-ellipsis">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-              </div>
-              <button v-else>Continue</button>
+              
+              <button >
+                  <span v-if="loader">
+                <Loading />
+              </span>
+                  <span v-else>Continue</span>
+                  </button>
             </div>
 
             <div class="alternative-auth">
@@ -90,8 +90,9 @@ export default {
       this.loader = !this.loader
       setTimeout(() => {
         this.$nuxt.$options.router.push('/dashboard')
+        this.loader = !this.loader
       }, 1500)
-      this.loader = !this.loader
+      
     },
   },
 }

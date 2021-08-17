@@ -17,7 +17,7 @@
           </div>
 
           <div class="contents-list">
-            <div v-for="link in data" :key="link.id+link">
+            <div v-for="link in data" :key="link">
               <div class="link-list">
                 <img :src="require(`@/assets/icons/${link.icon}`)" alt="icon" />
                 <div>
@@ -45,7 +45,7 @@
               </div>
             </div>
             <div class="link-list settings">
-              <div class="switch" >
+              <div class="switch">
                 <div
                   @click="toggleSwitch"
                   :class="[onSwitch ? 'active' : null, 'inner-switch']"
@@ -132,6 +132,8 @@ export default {
   .contents-list {
     display: flex;
     flex-direction: column;
+    font-size: 14px;
+
     div:first-child {
       margin-bottom: 10px;
     }
@@ -162,7 +164,7 @@ export default {
     }
   }
   .developers {
-    margin-top: 20px;
+    margin-top: 10px;
   }
   .settings {
     margin: 10px 0;
